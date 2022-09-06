@@ -21,32 +21,32 @@ export const config = {
    *    useTemplateId: "PrnfJnDjG0u5DE-RQSVOAw8z51gNCtl2dYQkDMnZuB8",
    *    // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
    *    openUrl: "https://wangxinleo.cn"
-   *   }, 
+   *   },
    * ]
    */
   USERS: [
     {
       // 想要发送的人的名字
-      name: "老婆0",
+      name: "老婆",
       // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: "oSIm45kDM8hwP1GjbwOxMnZA5rrA",
       // 你想对他发送的模板消息的模板ID
-      useTemplateId: "PrnfJnDjG0u5DE-RQSVOAw8z51gNCtl2dYQkDMnZuB8",
+      useTemplateId: "l8bugxbzQAtGm5PpZmNX2EilqcGL4y5Elod7C6eqsts",
       // 所在省份
       province: "陕西",
       // 所在城市
       city: "西安",
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
-      openUrl: "https://weibo.com/hot/search"
-    }, 
+      openUrl: "https://weibo.com"
+    },
 //     {
-//       name: "老婆1", 
+//       name: "老婆1",
 //       id: "",
 //       useTemplateId: "",
 //       province: "",
 //       city: "",
 //       openUrl: "https://wangxinleo.cn"
-//     }, 
+//     },
 //     {
 //       name: "老婆2",
 //       id: "",
@@ -54,15 +54,15 @@ export const config = {
 //       province: "",
 //       city: "",
 //       openUrl: "https://wangxinleo.cn"
-//     }, 
+//     },
 //     {
-//       name: "老婆3", 
+//       name: "老婆3",
 //       id: "",
 //       useTemplateId: "",
 //       province: "",
 //       city: "",
 //       openUrl: "https://wangxinleo.cn"
-//     }, 
+//     },
   ],
 
   /**
@@ -70,7 +70,7 @@ export const config = {
    */
 
   // 回调消息模板id, 用来看自己有没有发送成功的那个模板
-  CALLBACK_TEMPLATE_ID: "zjV1glIuCXo4Csr23aXWEio1iP74sZJ7IQEES95lDsg6c4yOU",
+  CALLBACK_TEMPLATE_ID: "bN3acsJkoGINRImUHC3q15Qc5RDABFpt7GlgvQwVbAA",
 
   // 接收成功回调消息的微信号，（一般来说只填自己的微信号, name填不填无所谓）
   CALLBACK_USERS: [
@@ -78,10 +78,10 @@ export const config = {
       // 一般都填自己
       name: "bluesea",
       // 自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: "oSIm45q48zt6HEToCtvoXWW-G_9k",
-    }, 
+      id: "oSIm45kDM8hwP1GjbwOxMnZA5rrA",
+    },
   ],
-    
+
   /**
    * 信息配置
    */
@@ -103,11 +103,13 @@ export const config = {
    */
   FESTIVALS: [
     {"type": "生日", "name": "老婆", "year": "1996", "date": "08-22"},
-    {"type": "节日", "name": "结婚纪念日", "year": "2020", "date": "11-11"},
+    {"type": "节日", "name": "我们结婚纪念日", "year": "2020", "date": "11-11"},
+    // {"type": "生日", "name": "李四", "year": "1996", "date": "09-31"},
+    // {"type": "节日", "name": "被搭讪纪念日", "year": "2021", "date": "09-01"},
   ],
 
   /**
-   * 限制重要节日的展示条目, 需要填写数字; 
+   * 限制重要节日的展示条目, 需要填写数字;
    * 如果为3, 则仅展示“将要到达” 的3个重要节日提醒，剩下的将被忽略
    * 如果为0, 则默认展示全部
    */
@@ -117,18 +119,19 @@ export const config = {
 
   /** 你现在可以随心增加你认为的所有的需要纪念的日子啦！
     * keyword是指暴露给测试号的模板字段，填什么就暴露什么, 请注意不要和README的出参表中的字段重复。
-    * 比如：keyword: "love_date" ，在测试号中就是 {{ love_date.DATA }} 
+    * 比如：keyword: "love_date" ，在测试号中就是 {{ love_date.DATA }}
     * */
   CUSTOMIZED_DATE_LIST: [
     // 结婚纪念日
     {"keyword": "marry_day", date: "2020-11-11"},
+    {"keyword": "love_day", date: "2018-02-28"},
   ],
 
   /** 插槽 */
 
   /** 你可以在这里写超多的你想显示的内容了！
     * keyword是指暴露给测试号的模板字段，填什么就暴露什么, 请注意不要和README的出参表中的字段重复。
-    * 比如：keyword: "lover_prattle" ，在测试号中就是 {{ lover_prattle.DATA }} 
+    * 比如：keyword: "lover_prattle" ，在测试号中就是 {{ lover_prattle.DATA }}
     * */
   SLOT_LIST: [
     // 这样配置的话，就会每次发送这句话
