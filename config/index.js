@@ -39,14 +39,22 @@ export const config = {
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
       openUrl: "https://weibo.com"
     },
-//     {
-//       name: "老婆1",
-//       id: "",
-//       useTemplateId: "",
-//       province: "",
-//       city: "",
-//       openUrl: "https://wangxinleo.cn"
-//     },
+    {
+      name: "bluesea",
+      id: "oSIm45kDM8hwP1GjbwOxMnZA5rrA",
+      useTemplateId: "cf5DHu-bjAEsPZEiF_u2h14rOHwPyAl_xUPfCTZYJOs",
+      province: "陕西",
+      city: "西安",
+      openUrl: "https://wangxinleo.cn"
+    },
+    {
+      name: "浩子",
+      id: "oSIm45uzdeJD-uLV2VOognObnv44",
+      useTemplateId: "wUp8K-vWex555pgkkxmcz_mDTSOpsPemhDNBba4DhtI",
+      province: "陕西",
+      city: "西安",
+      openUrl: "https://wangxinleo.cn"
+    },
 //     {
 //       name: "老婆2",
 //       id: "",
@@ -79,6 +87,8 @@ export const config = {
       name: "bluesea",
       // 自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
       id: "oSIm45kDM8hwP1GjbwOxMnZA5rrA",
+      // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
+      openUrl: "https://weibo.com"
     },
   ],
 
