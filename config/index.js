@@ -45,7 +45,7 @@ export const config = {
       useTemplateId: "cf5DHu-bjAEsPZEiF_u2h14rOHwPyAl_xUPfCTZYJOs",
       province: "陕西",
       city: "西安",
-      openUrl: "https://wangxinleo.cn"
+      openUrl: "https://weibo.com"
     },
     {
       name: "浩子",
@@ -53,7 +53,7 @@ export const config = {
       useTemplateId: "wUp8K-vWex555pgkkxmcz_mDTSOpsPemhDNBba4DhtI",
       province: "陕西",
       city: "西安",
-      openUrl: "https://wangxinleo.cn"
+      openUrl: "https://weibo.com"
     },
 //     {
 //       name: "老婆2",
