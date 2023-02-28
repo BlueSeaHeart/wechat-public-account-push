@@ -49,7 +49,7 @@ export const config = {
     },
     {
       name: "妹妹",
-      id: "oSIm45uzdeJD-uLV2VOognObnv44",
+      id: "oSIm45qNQIMfhDMolX968YbLzmU8",
       useTemplateId: "1XlaXWwOihXhnvopOWFGSPwjEfuGIUyxnQ4y3zCojnM",
       province: "河北",
       city: "唐山",
