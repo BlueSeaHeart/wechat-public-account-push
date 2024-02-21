@@ -48,11 +48,11 @@ export const config = {
       openUrl: "https://weibo.com"
     },
     {
-      name: "妹妹",
-      id: "oSIm45qNQIMfhDMolX968YbLzmU8",
+      name: "阿晴",
+      id: "oSIm45qKVGQ8dh07K6Y_6vAzIGqc",
       useTemplateId: "1XlaXWwOihXhnvopOWFGSPwjEfuGIUyxnQ4y3zCojnM",
-      province: "河北",
-      city: "唐山",
+      province: "陕西",
+      city: "西安",
       openUrl: "https://weibo.com"
     },
 //     {
