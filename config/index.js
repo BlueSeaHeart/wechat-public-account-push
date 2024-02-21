@@ -55,14 +55,14 @@ export const config = {
       city: "西安",
       openUrl: "https://weibo.com"
     },
-    // {
-    //   name: "林",
-    //   id: "oSIm45qKVGQ8dh07K6Y_6vAzIGqc",
-    //   useTemplateId: "1XlaXWwOihXhnvopOWFGSPwjEfuGIUyxnQ4y3zCojnM",
-    //   province: "陕西",
-    //   city: "西安",
-    //   openUrl: "https://weibo.com"
-    // },
+    {
+      name: "林",
+      id: "oSIm45ugxkQPmVfQXYrVjEeXJ0xM",
+      useTemplateId: "1XlaXWwOihXhnvopOWFGSPwjEfuGIUyxnQ4y3zCojnM",
+      province: "辽宁",
+      city: "大连",
+      openUrl: "https://weibo.com"
+    },
 //     {
 //       name: "老婆2",
 //       id: "",
