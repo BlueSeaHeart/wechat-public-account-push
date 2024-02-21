@@ -63,6 +63,14 @@ export const config = {
       city: "大连",
       openUrl: "https://weibo.com"
     },
+    {
+      name: "君",
+      id: "oSIm45p_4I5SWLLcbkrsS6tFQRHw",
+      useTemplateId: "1XlaXWwOihXhnvopOWFGSPwjEfuGIUyxnQ4y3zCojnM",
+      province: "陕西",
+      city: "西安",
+      openUrl: "https://weibo.com"
+    },
 //     {
 //       name: "老婆2",
 //       id: "",
