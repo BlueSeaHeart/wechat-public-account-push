@@ -49,7 +49,7 @@ export const config = {
     },
     {
       name: "me",
-      id: "oSIm45iFtxd0zrXvhQKeVz8VxdjE",
+      id: "oSIm45kDM8hwP1GjbwOxMnZA5rrA",
       useTemplateId: "_uYv0i0P13pxzZyZPl2mZoHI38iNushGIT3fDMtOdTg",
       province: "陕西",
       city: "西安",
