@@ -20,15 +20,53 @@ const getAggregatedData = async () => {
 
   const weekList = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
   // 获取金山词霸每日一句
-  const { content: noteEn, note: noteCh } = await getCIBA()
+  let noteEn = '', noteCh = ''
+  try {
+    const cibaData = await getCIBA()
+    if (cibaData) {
+      noteEn = cibaData.content || ''
+      noteCh = cibaData.note || ''
+    }
+  } catch (e) {
+    console.error('获取金山词霸失败:', e)
+  }
+
   // 获取每日一言
-  const { hitokoto: oneTalk, from: talkFrom } = await getOneTalk(config.LITERARY_PREFERENCE)
+  let oneTalk = '', talkFrom = ''
+  try {
+    const oneTalkData = await getOneTalk(config.LITERARY_PREFERENCE)
+    if (oneTalkData) {
+      oneTalk = oneTalkData.hitokoto || ''
+      talkFrom = oneTalkData.from || ''
+    }
+  } catch (e) {
+    console.error('获取每日一言失败:', e)
+  }
+
   // 获取土味情话
-  const earthyLoveWords = await getEarthyLoveWords()
+  let earthyLoveWords = ''
+  try {
+    earthyLoveWords = await getEarthyLoveWords()
+  } catch (e) {
+    console.error('获取土味情话失败:', e)
+  }
+
   // 获取朋友圈文案
-  const momentCopyrighting = await getMomentCopyrighting()
+  let momentCopyrighting = ''
+  try {
+    momentCopyrighting = await getMomentCopyrighting()
+  } catch (e) {
+    console.error('获取朋友圈文案失败:', e)
+  }
+
   // 获取毒鸡汤
-  const poisonChickenSoup = await getPoisonChickenSoup()
+  let poisonChickenSoup = ''
+  try {
+    poisonChickenSoup = await getPoisonChickenSoup()
+  } catch (e) {
+    console.error('获取毒鸡汤失败:', e)
+  }
+
   // 统计日列表计算日期差
   const dateDiffParams = getDateDiffList().map(item => {
     return { name: item.keyword, value: item.diffDay, color: getColor() }
@@ -45,18 +83,19 @@ const getAggregatedData = async () => {
   for (const user of users) {
 
     // 获取每日天气
-    const {
-      // 天气
-      weather,
-      // 最高温度
-      temp: maxTemperature,
-      // 最低温度
-      tempn: minTemperature,
-      // 风向
-      wd: windDirection,
-      // 风力等级
-      ws: windScale
-    } = await getWeather(user.province || config.PROVINCE, user.city || config.CITY)
+    let weather = '', maxTemperature = '', minTemperature = '', windDirection = '', windScale = ''
+    try {
+      const weatherData = await getWeather(user.province || config.PROVINCE, user.city || config.CITY)
+      if (weatherData) {
+        weather = weatherData.weather || ''
+        maxTemperature = weatherData.temp || ''
+        minTemperature = weatherData.tempn || ''
+        windDirection = weatherData.wd || ''
+        windScale = weatherData.ws || ''
+      }
+    } catch (e) {
+      console.error('获取天气失败:', e)
+    }
 
     // 集成所需信息
     const wxTemplateParams = [
@@ -100,33 +139,42 @@ const getCallbackTemplateParams = (messageReply) => {
 }
 
 const main = async () => {
-  // 获取accessToken
-  const accessToken = await getAccessToken()
+  try {
+    // 获取accessToken
+    const accessToken = await getAccessToken()
 
-  // 处理好的用户数据
-  const aggregatedData = await getAggregatedData()
+    if (!accessToken) {
+      console.error('获取 accessToken 失败，请检查 APP_ID 和 APP_SECRET 配置')
+      return
+    }
 
-  // 公众号推送消息
-  const {
-    needPostNum,
-    successPostNum,
-    failPostNum,
-    successPostIds,
-    failPostIds
-  } = await sendMessageReply(aggregatedData, accessToken)
+    // 处理好的用户数据
+    const aggregatedData = await getAggregatedData()
 
-  // 获取回执信息
-  const callbackTemplateParams = getCallbackTemplateParams({
-    needPostNum,
-    successPostNum,
-    failPostNum,
-    successPostIds,
-    failPostIds
-  })
+    // 公众号推送消息
+    const {
+      needPostNum,
+      successPostNum,
+      failPostNum,
+      successPostIds,
+      failPostIds
+    } = await sendMessageReply(aggregatedData, accessToken)
 
-  // 发送回执
-  if (config.CALLBACK_TEMPLATE_ID) {
-    await sendMessageReply(config.CALLBACK_USERS, accessToken, config.CALLBACK_TEMPLATE_ID, callbackTemplateParams)
+    // 获取回执信息
+    const callbackTemplateParams = getCallbackTemplateParams({
+      needPostNum,
+      successPostNum,
+      failPostNum,
+      successPostIds,
+      failPostIds
+    })
+
+    // 发送回执
+    if (config.CALLBACK_TEMPLATE_ID) {
+      await sendMessageReply(config.CALLBACK_USERS, accessToken, config.CALLBACK_TEMPLATE_ID, callbackTemplateParams)
+    }
+  } catch (error) {
+    console.error('执行出错:', error)
   }
 }
 
