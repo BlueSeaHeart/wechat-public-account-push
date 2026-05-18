@@ -25,24 +25,32 @@ export const config = {
    * ]
    */
   USERS: [
-    {
-      // 想要发送的人的名字
-      name: "老婆",
-      // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: "oSIm45q-lf-24uYeHF_5gi7CQFyk",
-      // 你想对他发送的模板消息的模板ID
-      useTemplateId: "Yj2iVu02ILqO8NYG3oZWP0FVKzzh1iSnuwkSQMlZS5U",
-      // 所在省份
-      province: "陕西",
-      // 所在城市
-      city: "西安",
-      // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
-      openUrl: "https://weibo.com"
-    },
+    // {
+    //   // 想要发送的人的名字
+    //   name: "老婆",
+    //   // 扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+    //   id: "oSIm45q-lf-24uYeHF_5gi7CQFyk",
+    //   // 你想对他发送的模板消息的模板ID
+    //   useTemplateId: "Yj2iVu02ILqO8NYG3oZWP0FVKzzh1iSnuwkSQMlZS5U",
+    //   // 所在省份
+    //   province: "陕西",
+    //   // 所在城市
+    //   city: "西安",
+    //   // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
+    //   openUrl: "https://weibo.com"
+    // },
     {
       name: "bluesea",
       id: "oSIm45kDM8hwP1GjbwOxMnZA5rrA",
       useTemplateId: "cf5DHu-bjAEsPZEiF_u2h14rOHwPyAl_xUPfCTZYJOs",
+      province: "陕西",
+      city: "西安",
+      openUrl: "https://weibo.com"
+    },
+    {
+      name: "me",
+      id: "oSIm45iFtxd0zrXvhQKeVz8VxdjE",
+      useTemplateId: "_uYv0i0P13pxzZyZPl2mZoHI38iNushGIT3fDMtOdTg",
       province: "陕西",
       city: "西安",
       openUrl: "https://weibo.com"
@@ -71,14 +79,14 @@ export const config = {
     //   city: "西安",
     //   openUrl: "https://weibo.com"
     // },
-    {
-      name: "徐",
-      id: "oSIm45iFtxd0zrXvhQKeVz8VxdjE",
-      useTemplateId: "1XlaXWwOihXhnvopOWFGSPwjEfuGIUyxnQ4y3zCojnM",
-      province: "陕西",
-      city: "西安",
-      openUrl: "https://weibo.com"
-    },
+    // {
+    //   name: "徐",
+    //   id: "oSIm45iFtxd0zrXvhQKeVz8VxdjE",
+    //   useTemplateId: "1XlaXWwOihXhnvopOWFGSPwjEfuGIUyxnQ4y3zCojnM",
+    //   province: "陕西",
+    //   city: "西安",
+    //   openUrl: "https://weibo.com"
+    // },
 //     {
 //       name: "老婆2",
 //       id: "",
