@@ -50,7 +50,7 @@ export const config = {
     {
       name: "me",
       id: "oSIm45kDM8hwP1GjbwOxMnZA5rrA",
-      useTemplateId: "_uYv0i0P13pxzZyZPl2mZoHI38iNushGIT3fDMtOdTg",
+      useTemplateId: "	7oSjG8BSo-1D5XRexHOGejF8XhQaC12EbMbkTc96TJs",
       province: "陕西",
       city: "西安",
       openUrl: "https://weibo.com"
